@@ -301,9 +301,10 @@ class Cell
                     return \PhpOffice\PhpSpreadsheet\Calculation\Functions::NAME();
                 }
 
-                throw new \PhpOffice\PhpSpreadsheet\Calculation\Exception(
+                /*throw new \PhpOffice\PhpSpreadsheet\Calculation\Exception(
                     $this->getWorksheet()->getTitle() . '!' . $this->getCoordinate() . ' -> ' . $ex->getMessage()
-                );
+                );*/
+                return $this->calculatedValue;
             }
 
             if ($result === '#Not Yet Implemented') {
